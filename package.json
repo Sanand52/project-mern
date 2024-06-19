@@ -4,9 +4,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "npm start --prefix client",
-    "server": "npm run dev --prefix server",
-    "dev": "concurrently \"npm start\" \"npm run client\""
+    "client": "npm --prefix client start",
+    "client-build": "npm --prefix client run build",
+    "server": "npm --prefix server start",
+    "server-dev": "npm --prefix server run dev",
+    "dev": "concurrently \"npm run server-dev\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
